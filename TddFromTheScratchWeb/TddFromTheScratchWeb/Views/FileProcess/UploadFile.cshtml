@@ -1,0 +1,42 @@
+﻿@model ProcessResultModel
+
+@{
+    ViewData["Title"] = "Process File Results";
+}
+
+<h2>Process File Results</h2>
+
+<div class="row">
+    <div class="col-md-offset-3">
+       File Number: @Model.FileNumber
+    </div>
+</div>
+<div class="row">
+    <table>
+        <tr>
+            <th>Subsidiary</th>
+            <th>Seller Code</th>
+            <th>Client Name</th>
+            <th>Product Code</th>
+            <th>Product Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+        </tr>
+
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Subsidiary</td>
+                <td>@item.SellerCode </td>
+                <td>@item.ClientName</td>
+                <td>@item.ProductCode</td>
+                <td>@item.ProductDescription</td>
+                <td>@item.ProductQuantity</td>
+                <td>@item.ProductPrice</td>
+                <td>@item.Total</td>
+            </tr>
+        }
+    </table>
+
+</div>
