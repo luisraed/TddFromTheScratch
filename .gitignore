@@ -1,3 +1,6 @@
+/TddFromTheScratchWeb/packages/
+/TddFromTheScratchWeb/TddFromTheScratch.UnitTests/bin/
+/TddFromTheScratchWeb/TddFromTheScratch.UnitTests/obj/
 /TddFromTheScratchWeb/.vs/config/applicationhost.config
 /TddFromTheScratchWeb/.vs/TddFromTheScratchWeb/v15/.suo
 /TddFromTheScratchWeb/.vs/TddFromTheScratchWeb/v15/Server/sqlite3/db.lock
