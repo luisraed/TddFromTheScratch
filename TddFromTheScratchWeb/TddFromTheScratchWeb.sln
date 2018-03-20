@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddFromTheScratchWeb", "Tdd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddFromTheScratch.Business", "TddFromTheScratch.Business\TddFromTheScratch.Business.csproj", "{FAF668F0-23B4-4F0A-88A9-32496A9496B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddFromTheScratchConsole", "TddFromTheScratchConsole\TddFromTheScratchConsole.csproj", "{18B9BD18-5DF4-4F6C-9D34-212D236468BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddFromTheScratchConsole", "TddFromTheScratchConsole\TddFromTheScratchConsole.csproj", "{C8367D34-BE77-44F0-8CC1-019CC5822338}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{FAF668F0-23B4-4F0A-88A9-32496A9496B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF668F0-23B4-4F0A-88A9-32496A9496B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF668F0-23B4-4F0A-88A9-32496A9496B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18B9BD18-5DF4-4F6C-9D34-212D236468BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18B9BD18-5DF4-4F6C-9D34-212D236468BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18B9BD18-5DF4-4F6C-9D34-212D236468BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18B9BD18-5DF4-4F6C-9D34-212D236468BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8367D34-BE77-44F0-8CC1-019CC5822338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8367D34-BE77-44F0-8CC1-019CC5822338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8367D34-BE77-44F0-8CC1-019CC5822338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8367D34-BE77-44F0-8CC1-019CC5822338}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
