@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TddFromTheScratch.Business;
 using TddFromTheScratch.Business.Enumerations;
+using FluentAssertions;
 
 namespace TddFromTheScratch.UnitTests.Business
 {
@@ -21,6 +23,21 @@ namespace TddFromTheScratch.UnitTests.Business
 
             //Assert
             Assert.AreEqual(expected, result.Status);
+        }
+
+        [TestMethod]
+        public void ProcessFile_FilenameIsEmpty_ReturnsAnEmptyListOfItems()
+        {
+            //Arrange
+            var expected = new List<ProcessResultItem>();
+
+            var csvProcessor = new CsvProcessor();
+
+            //Act
+            var actual = csvProcessor.ProcessFile(string.Empty);
+
+            //Assert
+            actual.Items.Should().AllBeEquivalentTo(expected);
         }
     }
 }

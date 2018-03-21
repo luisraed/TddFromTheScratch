@@ -16,8 +16,14 @@ namespace TddFromTheScratch.Business
 
         public ProcessFileResult ProcessFile(string fileName)
         {
-            var processFileResult = new ProcessFileResult { Items = new List<ProcessResultItem>() };
-            
+            var processFileResult = new ProcessFileResult {
+                Status = Enumerations.ProcessFileStatuses.Error,
+                Items = new List<ProcessResultItem>()
+            };
+
+            if (string.IsNullOrEmpty(fileName))
+                return processFileResult;
+
             var path = Path.Combine(Directory.GetCurrentDirectory(), "Uploads", fileName);
 
             if (!File.Exists(path))
