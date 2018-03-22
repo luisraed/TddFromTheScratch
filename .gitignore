@@ -1,5 +1,7 @@
 /TddFromTheScratchWeb/.vscode/
 /TddFromTheScratchWeb/packages/
+/TddFromTheScratchWeb/TddFromTheScratchWeb.UnitTests/bin/
+TddFromTheScratchWeb/TddFromTheScratchWeb.UnitTests/obj/
 /TddFromTheScratchWeb/TddFromTheScratch.UnitTests/bin/
 /TddFromTheScratchWeb/TddFromTheScratch.UnitTests/obj/
 /TddFromTheScratchWeb/.vs/config/applicationhost.config
