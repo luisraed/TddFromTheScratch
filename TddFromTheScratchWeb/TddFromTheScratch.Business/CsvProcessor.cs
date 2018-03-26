@@ -5,9 +5,16 @@ namespace TddFromTheScratch.Business
 {
     public class CsvProcessor
     {
+        private IFilesystemWrapper _filesystemWrapper;
+
         public CsvProcessor()
         {
+            _filesystemWrapper = new FilesystemWrapper();
+        }
 
+        public CsvProcessor(IFilesystemWrapper filesystemWrapper)
+        {
+            _filesystemWrapper = filesystemWrapper;
         }
 
         public ProcessFileResult ProcessFile(string fileName)
@@ -20,12 +27,12 @@ namespace TddFromTheScratch.Business
             if (string.IsNullOrEmpty(fileName))
                 return processFileResult;
 
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "Uploads", fileName);
+            var path = _filesystemWrapper.PathCombine(fileName);
 
-            if (!File.Exists(path))
+            if (!_filesystemWrapper.FileExists(path))
                return processFileResult;
 
-            var fileLines = File.ReadAllLines(path);
+            var fileLines = _filesystemWrapper.ReadAlllines(path);
 
             processFileResult.FileNumber = int.Parse(fileLines[0].Substring(12, 6));
 
