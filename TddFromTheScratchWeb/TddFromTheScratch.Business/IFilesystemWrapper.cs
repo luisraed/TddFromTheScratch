@@ -2,8 +2,8 @@
 {
     public interface IFilesystemWrapper
     {
-        string PathCombine(string fileName);
         bool FileExists(string path);
+        string PathCombine(string fileName);
         string[] ReadAlllines(string path);
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="CsvProcessor.cs" />
     <Compile Include="Enumerations\ProcessFileStatuses.cs" />
     <Compile Include="FilesystemWrapper.cs" />
+    <Compile Include="FilesystemWrapperFactory.cs" />
     <Compile Include="FileUploader.cs" />
     <Compile Include="IFilesystemWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
