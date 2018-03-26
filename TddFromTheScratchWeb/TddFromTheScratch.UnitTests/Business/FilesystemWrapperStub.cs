@@ -9,7 +9,7 @@ namespace TddFromTheScratch.UnitTests.Business
         public string[] Lines { get; set; }
 
         public bool FileExists(string path)
-           {
+        {
             return Exists;
         }
 
@@ -23,5 +23,5 @@ namespace TddFromTheScratch.UnitTests.Business
             return Lines;
         }
     }
-
+}
 }

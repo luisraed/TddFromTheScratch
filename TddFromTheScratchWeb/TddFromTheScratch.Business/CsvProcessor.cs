@@ -9,7 +9,12 @@ namespace TddFromTheScratch.Business
 
         public CsvProcessor()
         {
+            _filesystemWrapper = new FilesystemWrapper();
+        }
 
+        public CsvProcessor(IFilesystemWrapper filesystemWrapper)
+        {
+            _filesystemWrapper = filesystemWrapper;
         }
 
         public IFilesystemWrapper FilesystemWrapper

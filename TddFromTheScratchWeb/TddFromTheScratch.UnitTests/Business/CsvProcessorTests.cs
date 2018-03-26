@@ -15,10 +15,10 @@ namespace TddFromTheScratch.UnitTests.Business
             //Arrange
             var expected = ProcessFileStatuses.Error;
 
-            var csvProcessor = new CsvProcessor();
+            var sut = new CsvProcessor();
 
             //Act
-            var result = csvProcessor.ProcessFile(string.Empty);
+            var result = sut.ProcessFile(string.Empty);
 
             //Assert
             Assert.AreEqual(expected, result.Status);
@@ -30,10 +30,30 @@ namespace TddFromTheScratch.UnitTests.Business
             //Arrange
             var expected = new List<ProcessResultItem>();
 
-            var csvProcessor = new CsvProcessor();
+            var sut = new CsvProcessor(new FilesystemWrapperStub());
 
             //Act
-            var actual = csvProcessor.ProcessFile(string.Empty);
+            var actual = sut.ProcessFile(string.Empty);
+
+            //Assert
+            actual.Items.Should().AllBeEquivalentTo(expected);
+        }
+
+        [TestMethod]
+        public void ProcessFile_FileDoesNotExist_ReturnsAnEmptyListOfItems()
+        {
+            //Arrange
+            var expected = new List<ProcessResultItem>();
+
+            var fileSystemWrapperStub = new FilesystemWrapperStub();
+            fileSystemWrapperStub.Exists = false;
+            fileSystemWrapperStub.Path = "path";
+            fileSystemWrapperStub.Lines = new[] { "blah" };
+
+            var sut = new CsvProcessor(fileSystemWrapperStub);
+
+            //Act
+            var actual = sut.ProcessFile("filename");
 
             //Assert
             actual.Items.Should().AllBeEquivalentTo(expected);
