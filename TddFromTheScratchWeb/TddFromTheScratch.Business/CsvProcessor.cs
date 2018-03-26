@@ -6,9 +6,29 @@ namespace TddFromTheScratch.Business
     public class CsvProcessor
     {
         private IFilesystemWrapper _filesystemWrapper;
+
         public CsvProcessor()
         {
             _filesystemWrapper = FilesystemWrapperFactory.Create();
+        }
+
+        public CsvProcessor(IFilesystemWrapper filesystemWrapper)
+        {
+            _filesystemWrapper = filesystemWrapper;
+        }
+
+        public IFilesystemWrapper FilesystemWrapper
+        {
+            get
+            {
+                if (_filesystemWrapper == null)
+                    _filesystemWrapper = new FilesystemWrapper();
+                return _filesystemWrapper;
+            }
+            set
+            {
+                _filesystemWrapper = value;
+            }
         }
 
         public ProcessFileResult ProcessFile(string fileName)

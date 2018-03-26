@@ -6,10 +6,5 @@ namespace TddFromTheScratch.UnitTests.Web
     [TestClass]
     public class FileProcessControllerTests
     {
-        
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
     }
 }
