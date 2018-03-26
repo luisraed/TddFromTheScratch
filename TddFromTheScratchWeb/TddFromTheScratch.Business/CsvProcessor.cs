@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.IO;
+using TddFromTheScratchWeb.Business;
 
 namespace TddFromTheScratch.Business
 {
@@ -9,7 +9,7 @@ namespace TddFromTheScratch.Business
 
         public CsvProcessor()
         {
-            _filesystemWrapper = new FilesystemWrapper();
+            _filesystemWrapper = FilesystemWrapperFactory.Create();
         }
 
         public CsvProcessor(IFilesystemWrapper filesystemWrapper)
@@ -23,7 +23,6 @@ namespace TddFromTheScratch.Business
             {
                 if (_filesystemWrapper == null)
                     _filesystemWrapper = new FilesystemWrapper();
-
                 return _filesystemWrapper;
             }
             set

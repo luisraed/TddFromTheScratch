@@ -11,12 +11,15 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
-    <Compile Include="Business\FilesystemWrapperStub.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TddFromTheScratch.Business\TddFromTheScratch.Business.csproj" />
     <ProjectReference Include="..\TddFromTheScratchWeb\TddFromTheScratchWeb.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Web\" />
   </ItemGroup>
 
 </Project>
