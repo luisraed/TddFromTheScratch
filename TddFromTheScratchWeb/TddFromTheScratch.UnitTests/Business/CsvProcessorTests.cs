@@ -58,5 +58,26 @@ namespace TddFromTheScratch.UnitTests.Business
             //Assert
             actual.Items.Should().AllBeEquivalentTo(expected);
         }
+
+        [TestMethod]
+        public void ProcessFile_FileDoesNotExist_ReturnsAnEmptyListOfItems()
+        {
+            //Arrange
+            var expected = new List<ProcessResultItem>();
+
+            var fileSystemWrapperStub = new FilesystemWrapperStub();
+            fileSystemWrapperStub.Exists = false;
+            fileSystemWrapperStub.Path = "path";
+            fileSystemWrapperStub.Lines = new[] { "blah" };
+
+            var sut = new CsvProcessor();
+            sut.FilesystemWrapper = fileSystemWrapperStub;
+
+            //Act
+            var actual = sut.ProcessFile("filename");
+
+            //Assert
+            actual.Items.Should().AllBeEquivalentTo(expected);
+        }
     }
 }

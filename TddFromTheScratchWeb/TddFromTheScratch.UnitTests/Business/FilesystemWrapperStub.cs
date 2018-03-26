@@ -24,3 +24,4 @@ namespace TddFromTheScratch.UnitTests.Business
         }
     }
 }
+}
